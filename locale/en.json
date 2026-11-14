@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "HTTP proxy",
+    "description": "Route model requests and other outbound HTTP traffic through a configurable proxy, editable on the Plugins page.",
+    "detail": "README.md"
+  }
+}

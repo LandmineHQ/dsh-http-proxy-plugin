@@ -1,0 +1,12 @@
+# Rows this bundle inserts into a dsh profile.
+#
+# `http-proxy` installs the proxy policy described by its own config: the two
+# proxy URLs below and an optional bypass list. The values are ordinary plugin
+# configuration, so the HTTP proxy page on this bundle's Plugins entry can
+# override them; a cleared field there falls back to the value set here.
+- insert:
+    - id: http-proxy
+      name: '@local/dsh-http-proxy'
+      config:
+        httpProxy: http://127.0.0.1:20172
+        httpsProxy: http://127.0.0.1:20172

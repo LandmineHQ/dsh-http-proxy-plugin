@@ -1,0 +1,10 @@
+# Dependencies installed into a profile are managed by dsh, never vendored here.
+node_modules/
+
+# Logs and packaging leftovers
+*.log
+*.tgz
+
+# OS noise
+.DS_Store
+Thumbs.db

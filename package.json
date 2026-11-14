@@ -1,0 +1,42 @@
+{
+  "name": "@local/dsh-http-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Route model requests and other outbound HTTP traffic through a configurable HTTP proxy.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./policy.js": "./policy.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "policy.js",
+    "probe.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-http-proxy": "0.2.2-rc.1",
+    "@deepseek-ai/schemastery": "~3.19.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    }
+  }
+}
